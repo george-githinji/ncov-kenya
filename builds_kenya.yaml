@@ -1,0 +1,36 @@
+inputs:
+  - name: kenya
+    metadata: data/kenya.tar.gz
+    sequences: data/kenya.tar.gz
+  - name: africa
+    metadata: data/africa.tar.gz
+    sequences: data/africa.tar.gz
+  - name: references
+    metadata: data/references_metadata.tsv
+    sequences: data/references_sequences.fasta
+
+builds:
+  kenya:
+    subsampling_scheme: country_scheme
+    title: "Genomic epidemiology of SARS-CoV-2 in Kenya"
+    auspice_config: "ncov-kenya/auspice_config.json"
+    description: "ncov-kenya/description.md"
+
+subsampling:
+  country_scheme:
+    focal:
+      query: --query "(country == 'Kenya')"
+      max_sequences: 5000
+    region_context:
+      query: --query "(region == 'Africa') & (country != 'Kenya')"
+      max_sequences: 1000
+      group_by: country year month
+      priorities:
+        type: proximity
+        focus: focal
+    global_context:
+      query: --query "(region != 'Africa')"
+      max_sequences: 1000
+      priorities:
+        type: proximity
+        focus: focal
