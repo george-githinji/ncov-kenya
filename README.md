@@ -24,7 +24,7 @@ All configuration files for the Kenya workflow live in the resulting `ncov-kenya
 ## Download data
 
 Follow [instructions to curate data from GISAID search and downloads](https://docs.nextstrain.org/projects/ncov/en/latest/analysis/data-prep.html#curate-data-from-gisaid-search-and-downloads).
-Specifically, search for "Africa / Kenya" in the search interface and download the "Africa" bundle from the "nextregions" downloads on GISAID.
+Specifically, search for "Africa / Kenya" in the search interface (checking the additional filters of "Complete", "Low coverage excluded", and "Collection date complete") and download the "Africa" bundle from the "nextregions" downloads on GISAID.
 Save the Kenya data to the `ncov/` directory in the `data/` subdirectory as `kenya.tar`.
 Compress the Kenyan data with `gzip data/kenya.tar`.
 Save the Africa nextregions file to the `ncov/data/` directory as `africa.tar.gz`.
