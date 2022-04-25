@@ -29,6 +29,8 @@ Save the Kenya data to the `ncov/` directory in the `data/` subdirectory as `ken
 Compress the Kenyan data with `gzip data/kenya.tar`.
 Save the Africa nextregions file to the `ncov/data/` directory as `africa.tar.gz`.
 
+Alternately, if there are too many records to use GISAID's search interface, [curate Kenya-specific data from the full GISAID database as described in this tutorial](https://discussion.nextstrain.org/t/guide-to-filtering-gisaid-data-for-division-specific-sars-cov-2-builds/997#curating-data-from-gisaid-2).
+
 ## Run the workflow
 
 Run the workflow with the Nextstrain CLI (or Snakemake, if you prefer), specifying the build configuration file in the `ncov-kenya/` directory.
