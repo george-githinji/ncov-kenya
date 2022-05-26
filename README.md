@@ -1,5 +1,10 @@
 # Kenya-specific SARS-CoV-2 Nextstrain analysis
 
+## Get the workflow
+```bash 
+https://github.com/george-githinji/ncov-KE
+```
+
 ## Run the workflow
 
 Run the workflow with the Nextstrain CLI (or Snakemake, if you prefer), specifying the build configuration file in the `ncov-kenya/` directory.
